@@ -36,16 +36,25 @@
 
     <!-- jquery cdn link  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" as="style">
+
+    <!-- Add these near the top of your head section -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   </head>
   <body>
-    <!-- navbar starts -->
+    <!-- Your existing content -->
     <nav
       id="navbar-top"
       class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
     >
       <div class="container-fluid px-5">
         <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d"
-          >Portfolio</a
+          >Prabin Dumre</a
         >
         <button
           class="nav-menu d-md-none"
@@ -56,32 +65,32 @@
           <i class="bi bi-menu-button-fill"></i>
         </button>
         <div
-          class="collapse navbar-collapse justify-content-center"
+          class="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
-          <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+          <ul class="navbar-nav gap-4 me-4" style="font-size: 1.1rem">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#service">Service</a>
+              <a class="nav-link" href="#education">Education</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#experience">Experience</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#about">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#portfolio">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#research">Research</a>
             </li>
           </ul>
+          <a
+            class="c-btn py-2 px-4 rounded-pill d-none d-md-block"
+            href="#contact"
+            >Contact</a
+          >
         </div>
-        <a
-          class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block"
-          href="#contact"
-          >Contact</a
-        >
       </div>
     </nav>
     <!-- navbar ends here -->
@@ -98,22 +107,57 @@
             Hello! I Am <br /><span class="c-orange">Prabin Dumre</span>
           </h2>
           <p class="text-muted">
-            I'm a highly motivated individual with diverse skill set ranging
-            from multiple programming languages to multiple tools. Looking to
-            excel my expertise across various domains within computer science.
+            I am a highly motivated programmer, content writer, and educator with a diverse skill set spanning data science, machine learning, web development, and cloud technologies. I have a strong foundation in Python, JavaScript, and cloud computing, and I'm passionate about solving complex problems and creating innovative solutions.
+            <br><br>
+            In addition to programming, I enjoy writing tech content, sharing insights through tutorials, and teaching others. I'm always eager to learn new technologies and expand my expertise across various domains within computer science. I'm open to exciting opportunities that align with my skills and passion for technology and education.
           </p>
-          <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+          
+          <!-- Update the social icons container -->
+          <div class="social-icons-container mt-4 mb-4">
+            <!-- GitHub -->
+            <a href="https://github.com/PrabinDumre" target="_blank" class="social-icon">
+              <i class="bi bi-github"></i>
+            </a>
+            
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/prabin-dumre/" target="_blank" class="social-icon">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=100078762161566" target="_blank" class="social-icon">
+              <i class="bi bi-facebook"></i>
+            </a>
+            
+            <!-- LeetCode -->
+            <a href="https://leetcode.com/u/Prabindumre/" target="_blank" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+              </svg>
+            </a>
+            
+            <!-- GeeksforGeeks -->
+            <a href="https://www.geeksforgeeks.org/user/prabindumre1670/" target="_blank" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM10.4 7.6c-.2.2-.4.4-.4.7v7.4c0 .3.2.5.4.7.2.2.5.2.7 0l3.6-3.6c.2-.2.2-.5 0-.7L11 8.3c-.2-.2-.5-.2-.7 0Zm1.8 6.7V9.7L14 12l-1.8 2.3Z"/>
+                <path d="M13.6 7.6c.2.2.4.4.4.7v7.4c0 .3-.2.5-.4.7-.2.2-.5.2-.7 0L9.3 12.8c-.2-.2-.2-.5 0-.7l3.6-3.6c.2-.2.5-.2.7 0ZM12 14.3V9.7L10 12l2 2.3Z"/>
+              </svg>
+            </a>
+          </div>
+
+          <a href="#contact" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill text-decoration-none">
             Hire Me
-          </button>
+          </a>
           <a href="" class="link ms-4 d-none">See My Work</a>
         </div>
         <div class="col-10 col-md-4 d-none d-md-block">
-          <img src="images/prabin.jpeg" class="img-fluid" alt="" />
+          <img src="images/prabin.jpeg" class="img-fluid" alt="" loading="lazy" />
         </div>
       </div>
     </section>
     <!-- home section ends here -->
-    <!-- expertise section starts -->
+    
+    <!-- Commenting out expertise section
     <section class="expertise mt-5" id="service">
       <div class="heading text-center">
         <small>My Expertise</small>
@@ -185,118 +229,245 @@
         </div>
       </div>
     </section>
-    <!-- expertise section ends here -->
+    End of commented expertise section -->
 
-    <!-- Experience Section Starts -->
+    <!-- Education section starts -->
+    <section class="education py-5" id="education">
+      <div class="heading text-center mb-5">
+        <small>Academic Background</small>
+        <h3>Education</h3>
+      </div>
+
+      <div class="container-fluid px-lg-5 px-md-3 px-sm-2">
+        <div class="row justify-content-center align-items-center g-4">
+          <!-- Grade X Education (First) -->
+          <div class="col-12 col-md-6 col-lg-6" data-aos="fade-up">
+            <div class="education-card">
+              <div class="education-period">Mar 2018 – Jun 2019</div>
+              <div class="education-location">Sunwal, Nepal</div>
+              <h4>GRADE X, National Examination Board (NEB)</h4>
+              <div class="education-school">Annapurna English Medium Secondary School</div>
+              <div class="education-grade">Cumulative GPA: 3.65/4</div>
+              <div class="education-achievements">
+                <ul class="list-unstyled mt-3">
+                  <li>• Rank 1 in School</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grade XII Education (Second) -->
+          <div class="col-12 col-md-6 col-lg-6" data-aos="fade-up">
+            <div class="education-card">
+              <div class="education-period">Aug 2019 – Jul 2021</div>
+              <div class="education-location">Butwal, Nepal</div>
+              <h4>GRADE XII, National Examination Board (NEB)</h4>
+              <div class="education-school">Everest English Boarding Secondary School</div>
+              <div class="education-grade">Cumulative GPA: 3.78/4</div>
+              <div class="education-achievements">
+                <ul class="list-unstyled mt-3">
+                  <li>• Rank 2 in School</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- BTech Education (Third) -->
+          <div class="col-12 col-md-6 col-lg-6" data-aos="fade-up">
+            <div class="education-card">
+              <div class="education-period">Aug 2021 – Jul 2025</div>
+              <div class="education-location">Bengaluru, India</div>
+              <h4>Bachelor of Technology in Computer Science and Engineering</h4>
+              <div class="education-school">Jain Deemed to Be University</div>
+              <div class="education-grade">Cumulative GPA: 9.3/10</div>
+              <div class="education-achievements">
+                <ul class="list-unstyled mt-3">
+                  <li>• Rank 2 in Class and Rank 5 in Department</li>
+                  <li>• Full scholarship recipient through Pragati Scholarship (IND-SAT) funded by Study in India (EDCIL)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Education section ends -->
+
+    <!-- Update the Experience section container -->
     <section class="experience py-5" id="experience">
       <div class="heading text-center mb-5">
         <small>My Journey</small>
         <h3>Experience & Leadership</h3>
       </div>
 
-      <div class="container">
-        <!-- Professional Experience -->
-        <div class="timeline">
-          <h4 class="section-subheading text-center mb-4">
-            Professional Experience
-          </h4>
-          <!-- Experience 1 -->
-          <div class="timeline-item" data-aos="fade-right">
-            <div class="timeline-icon">
-              <img src="images/content-writer.png" alt="Content Writer Icon" />
-            </div>
-            <div class="timeline-content">
-              <h4>Content Writer</h4>
-              <small>Litspark Solutions | Jul 2024 - Aug 2024</small>
-              <p>
-                Created LinkedIn posts, blogs, and optimized website content to
-                enhance user experience and SEO performance.
-              </p>
+      <div class="container-fluid px-lg-5 px-md-3 px-sm-2">
+        <div class="row justify-content-center">
+          <!-- Left Column -->
+          <div class="col-12 col-lg-6">
+            <!-- Professional Experience -->
+            <div class="timeline">
+              <h4 class="section-subheading text-center mb-4">Professional Experience</h4>
+              
+              <!-- Siemens Experience -->
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="timeline-icon">
+                  <img src="images/companies/siemens.png" alt="Siemens Healthineers" />
+                </div>
+                <div class="timeline-content">
+                  <h4>Intern Trainee</h4>
+                  <small>Siemens Healthineers | Nov 2024 - Present | Bengaluru, India</small>
+                  <p>
+                    • Gained hands-on experience with C# programming, focusing on the development of software for integration into medical devices such as CT scanners, MRI machines, and ultrasound equipment.<br>
+                    • Acquired a strong understanding of medical device operations and software integration, enhancing practical knowledge through lab visits and insights into Siemens' global machine deployment and servicing.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Litspark Solutions -->
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-icon">
+                  <img src="images/companies/litspark.png" alt="Litspark Solutions" />
+                </div>
+                <div class="timeline-content">
+                  <h4>Content Writer</h4>
+                  <small>Litspark Solutions | Jul 2024 - Aug 2024 | Bengaluru, India</small>
+                  <p>
+                    • Researched and created engaging LinkedIn posts, blogs, and website content aligned with SEO strategies.<br>
+                    • Enhanced brand visibility by optimizing two websites for improved user experience and search rankings.
+                  </p>
+                </div>
+              </div>
+
+              <!-- DollarPe -->
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-icon">
+                  <img src="images/companies/dollarpe.png" alt="DollarPe" />
+                </div>
+                <div class="timeline-content">
+                  <h4>Content Writer</h4>
+                  <small>DollarPe Technologies Pvt. Ltd. | Jan 2024 - Apr 2024 | Remote, India</small>
+                  <p>
+                    • Created SEO-optimized articles for the company blog and help sections, contributing to the organic growth of company.<br>
+                    • Improved website traffic and visibility by delivering high-quality, targeted content, enhancing user engagement and search rankings.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Add KNP Nerolac -->
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="timeline-icon">
+                  <img src="images/companies/knp-nerolac.png" alt="KNP Nerolac" />
+                </div>
+                <div class="timeline-content">
+                  <h4>Junior Data Analyst</h4>
+                  <small>KNP Nerolac Paints Ltd. | Jun 2023 - Jul 2023 | Parsa (Hybrid), Nepal</small>
+                  <p>
+                    • Conducted data cleansing, analysis, and visualization to optimize operational processes.<br>
+                    • Delivered actionable insights that improved production efficiency and developed dashboards for real-time monitoring.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Add Annapurna School -->
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="timeline-icon">
+                  <img src="images/companies/annapurna.png" alt="Annapurna English Medium Secondary School" />
+                </div>
+                <div class="timeline-content">
+                  <h4>Primary Level Computer Teacher</h4>
+                  <small>Annapurna English Medium Secondary School | May 2020 - Jun 2021 | Sunwal, Nepal</small>
+                  <p>
+                    • Taught computer skills to primary-level students and planned, conducted, and managed extra-curricular activities.<br>
+                    • Fostered a foundational understanding of technology among students and improved the school's curriculum engagement through well-organized activities.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Experience 2 -->
-          <div class="timeline-item" data-aos="fade-left">
-            <div class="timeline-icon">
-              <img src="images/data-science.png" alt="Data Science Icon" />
-            </div>
-            <div class="timeline-content">
-              <h4>Data Science Intern</h4>
-              <small>Bharat Intern | Jan 2024 - Feb 2024</small>
-              <p>
-                Developed predictive models for SMS classification and Titanic
-                survival analysis using Python and machine learning algorithms.
-              </p>
-            </div>
-          </div>
+          <!-- Right Column -->
+          <div class="col-12 col-lg-6">
+            <!-- Position of Responsibility -->
+            <div class="timeline mb-5">
+              <h4 class="section-subheading text-center mb-4">Position of Responsibility</h4>
+              
+              <!-- Student Placement Coordinator -->
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="timeline-icon">
+                  <img src="images/companies/jain-university.png" alt="JAIN University" />
+                </div>
+                <div class="timeline-content">
+                  <h4>Student Placement Coordinator, CSE Department</h4>
+                  <small>JAIN University | Jul 2023 - Present</small>
+                  <p>
+                    • Facilitated communication between students, faculty, and recruiters, managing placement activities efficiently.<br>
+                    • Improved placement outcomes by ensuring students were well-prepared and companies were engaged effectively.
+                  </p>
+                </div>
+              </div>
 
-          <!-- Experience 3 -->
-          <div class="timeline-item" data-aos="fade-right">
-            <div class="timeline-icon">
-              <img src="images/seo.png" alt="SEO Content Icon" />
+              <!-- Class Representative -->
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-icon">
+                  <img src="images/companies/jain-university.png" alt="JAIN University" />
+                </div>
+                <div class="timeline-content">
+                  <h4>Class Representative, CSE Department</h4>
+                  <small>JAIN University | Jul 2022 - Present</small>
+                  <p>
+                    • Acted as the liaison between faculty and students, addressing concerns and ensuring smooth coordination of academic activities.<br>
+                    • Fostered better communication and collaboration, enhancing the academic experience for peers.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="timeline-content">
-              <h4>Content Writer</h4>
-              <small>DollarPe | Jan 2024 - Apr 2024</small>
-              <p>
-                Produced high-quality SEO-optimized content, achieving top
-                Google rankings and an SEO score above 9.5.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Leadership Experience -->
-        <div class="timeline mt-5">
-          <h4 class="section-subheading text-center mb-4">
-            Leadership Experience
-          </h4>
-          <!-- Leadership 1 -->
-          <div class="timeline-item" data-aos="fade-left">
-            <div class="timeline-icon">
-              <img
-                src="images/placement-coordinator.png"
-                alt="Placement Icon"
-              />
-            </div>
-            <div class="timeline-content">
-              <h4>Student Placement Coordinator</h4>
-              <small>CSE Department | Jul 2023 - Present</small>
-              <p>
-                Coordinated placement activities for the department, enhancing
-                student opportunities and bridging the gap between recruiters
-                and students.
-              </p>
-            </div>
-          </div>
+            <!-- Organizations -->
+            <div class="timeline">
+              <h4 class="section-subheading text-center mb-4">Organizations</h4>
+              
+              <!-- Internshala -->
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="timeline-icon">
+                  <img src="images/companies/internshala.png" alt="Internshala" />
+                </div>
+                <div class="timeline-content">
+                  <h4>Internshala Student Partner (ISP)</h4>
+                  <small>Internshala | Nov 2023 - Present | Bengaluru, India</small>
+                  <p>
+                    • Representing Internshala on campus to promote internships, trainings, and career development opportunities.<br>
+                    • Increased awareness and participation among peers in career-enhancing programs, fostering a culture of professional growth.
+                  </p>
+                </div>
+              </div>
 
-          <!-- Leadership 2 -->
-          <div class="timeline-item" data-aos="fade-right">
-            <div class="timeline-icon">
-              <img src="images/ambassador.png" alt="Ambassador Icon" />
-            </div>
-            <div class="timeline-content">
-              <h4>Campus Ambassador</h4>
-              <small>Shiksha.com | Sep 2023 - Present</small>
-              <p>
-                Acted as a liaison between the platform and students, promoting
-                educational resources and driving student engagement.
-              </p>
-            </div>
-          </div>
+              <!-- SHIKSHA.COM -->
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-icon">
+                  <img src="images/companies/shiksha.png" alt="SHIKSHA.COM" />
+                </div>
+                <div class="timeline-content">
+                  <h4>Campus Ambassador</h4>
+                  <small>SHIKSHA.COM | Nov 2023 - Feb 2024 | Bengaluru, India</small>
+                  <p>
+                    • Promoted SHIKSHA.COM services and events on campus by engaging with students and coordinating outreach activities.
+                  </p>
+                </div>
+              </div>
 
-          <!-- Leadership 3 -->
-          <div class="timeline-item" data-aos="fade-left">
-            <div class="timeline-icon">
-              <img src="images/red-cross.png" alt="Red Cross Icon" />
-            </div>
-            <div class="timeline-content">
-              <h4>President</h4>
-              <small>Youth Red Cross Society | Sep 2019 - Jun 2021</small>
-              <p>
-                Led and organized community service projects, fostering youth
-                participation and raising awareness for humanitarian efforts.
-              </p>
+              <!-- Red Cross -->
+              <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-icon">
+                  <img src="images/companies/red-cross.png" alt="Junior Red Cross Society" />
+                </div>
+                <div class="timeline-content">
+                  <h4>President</h4>
+                  <small>Junior Red Cross Society | Aug 2017 - Jun 2019 | Nepal</small>
+                  <p>
+                    • Led a team to organize health camps, blood donation drives, and community awareness programs, while also coordinating relief efforts during the 2016 Nepal earthquake and floods.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -306,202 +477,258 @@
 
     <!-- skill section starts -->
     <section class="skill mt-5 py-5" id="about">
-      <div class="row justify-content-evenly">
-        <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
-          <div class="row justify-content-evenly">
-            <div class="col-10 col-md-6">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress html-css">
-                  <span class="progress-value html-progress">90%</span>
+      <div class="heading text-center mb-5">
+        <small>My Skills</small>
+        <h3>Technical & Professional Skills</h3>
+      </div>
+      
+      <div class="container-fluid px-lg-5 px-md-3 px-sm-2">
+        <div class="row justify-content-center align-items-center g-4">
+          <!-- Technical Skills -->
+          <div class="col-12 col-md-6 col-lg-6" data-aos="slide-right">
+            <div class="skills-list h-100">
+              <h4 class="section-subheading mb-4">Technical Skills</h4>
+              
+              <div class="skill-category mb-4">
+                <strong>Programming Languages:</strong>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge rounded-pill bg-light text-dark">Python</span>
+                  <span class="badge rounded-pill bg-light text-dark">R</span>
+                  <span class="badge rounded-pill bg-light text-dark">C</span>
+                  <span class="badge rounded-pill bg-light text-dark">Java</span>
+                  <span class="badge rounded-pill bg-light text-dark">C#</span>
+                  <span class="badge rounded-pill bg-light text-dark">HTML</span>
+                  <span class="badge rounded-pill bg-light text-dark">CSS</span>
                 </div>
-                <br />
-                <span class="text">Python</span>
               </div>
-            </div>
-            <div class="col-10 col-md-6 mt-4 mt-md-0">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress javascript">
-                  <span class="progress-value javascript-progress">85%</span>
+
+              <div class="skill-category mb-4">
+                <strong>Tools:</strong>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge rounded-pill bg-light text-dark">Power BI</span>
+                  <span class="badge rounded-pill bg-light text-dark">Tableau</span>
+                  <span class="badge rounded-pill bg-light text-dark">Excel</span>
+                  <span class="badge rounded-pill bg-light text-dark">SQL</span>
+                  <span class="badge rounded-pill bg-light text-dark">MongoDB</span>
+                  <span class="badge rounded-pill bg-light text-dark">PostgreSQL</span>
+                  <span class="badge rounded-pill bg-light text-dark">VS Code</span>
+                  <span class="badge rounded-pill bg-light text-dark">Git</span>
+                  <span class="badge rounded-pill bg-light text-dark">GitHub</span>
+                  <span class="badge rounded-pill bg-light text-dark">SEMrush</span>
                 </div>
-                <br />
-                <span class="text">SQL</span>
+              </div>
+
+              <div class="skill-category">
+                <strong>Cloud Platforms:</strong>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge rounded-pill bg-light text-dark">Microsoft Azure</span>
+                  <span class="badge rounded-pill bg-light text-dark">Google Cloud</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="row justify-content-evenly mt-4">
-            <div class="col-10 col-md-6">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress php">
-                  <span class="progress-value php-progress">80%</span>
+
+          <!-- Soft Skills -->
+          <div class="col-12 col-md-6 col-lg-6" data-aos="slide-left">
+            <div class="soft-skills h-100">
+              <h4 class="section-subheading mb-4">Soft Skills</h4>
+              
+              <div class="skill-category mb-4">
+                <strong>Professional Competencies:</strong>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge rounded-pill bg-primary">Leadership</span>
+                  <span class="badge rounded-pill bg-primary">Teamwork</span>
+                  <span class="badge rounded-pill bg-primary">Adaptability</span>
+                  <span class="badge rounded-pill bg-primary">Continuous Learning</span>
+                  <span class="badge rounded-pill bg-primary">Driving Initiatives</span>
+                  <span class="badge rounded-pill bg-primary">Effective Writing</span>
+                  <span class="badge rounded-pill bg-primary">Verbal Communication</span>
+                  <span class="badge rounded-pill bg-primary">Analytical Thinking</span>
+                  <span class="badge rounded-pill bg-primary">Decision Making</span>
+                  <span class="badge rounded-pill bg-primary">Attention to Detail</span>
                 </div>
-                <br />
-                <span class="text">Excel</span>
+              </div>
+
+              <div class="skill-category">
+                <strong>Additional Skills:</strong>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge rounded-pill bg-primary">Problem Solving</span>
+                  <span class="badge rounded-pill bg-primary">Critical Thinking</span>
+                  <span class="badge rounded-pill bg-primary">Time Management</span>
+                  <span class="badge rounded-pill bg-primary">Project Management</span>
+                  <span class="badge rounded-pill bg-primary">Research</span>
+                </div>
               </div>
             </div>
-            <div class="col-10 col-md-6 mt-4 mt-md-0">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress reactjs">
-                  <span class="progress-value reactjs-progress">85%</span>
-                </div>
-                <br />
-                <span class="text">Power BI</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
-          <div class="heading mt-5 mt-md-3">
-            <small>My Skills</small>
-            <h3>Diverse & Specialized Technical Skills</h3>
-            <p class="text-muted">
-              With a robust foundation in programming and data analytics, I
-              excel in creating solutions across multiple domains in computer
-              science, leveraging cutting-edge tools and cloud technologies.
-            </p>
-            <p class="text-muted">
-              Continuously enhancing skills in Python, data visualization, cloud
-              architecture, and machine learning to deliver impactful results.
-            </p>
-            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              <!-- here download attribute is used for adding download functionality to button  -->
-              <a
-                href="Resume_Prabin_Dumre.pdf"
-                download="Prabin_Dumre_Resume"
-                style="text-decoration: none; color: #fff"
-                >Download CV</a
-              >
-            </button>
           </div>
         </div>
       </div>
     </section>
-    <!-- skill section end here -->
+    <!-- skill section ends -->
 
     <!-- portfolio section starts here -->
     <section class="portfolio" id="portfolio">
       <div class="heading text-center pt-5">
-        <small>Creative Work</small>
-        <h3>Check My Portfolio</h3>
+        <small>Recent Work</small>
+        <h3>My Projects</h3>
       </div>
 
       <div id="myBtnContainer" class="text-center mt-4">
-        <button class="filter-item" data-filter="all">All</button>
-        <button class="filter-item" data-filter="ml">Machine Learning</button>
-        <button class="filter-item" data-filter="webapp">Web App</button>
-        <button class="filter-item" data-filter="dataanalysis">
-          Data Analysis
-        </button>
+        <button class="filter-item active" data-filter="all">All</button>
+        <button class="filter-item" data-filter="mldl">ML & DL</button>
+        <button class="filter-item" data-filter="webapp">Web Apps</button>
+        <button class="filter-item" data-filter="dataanalysis">Data Analysis</button>
+        <button class="filter-item" data-filter="python">Python</button>
       </div>
 
       <div class="portfolio-body">
         <div class="row justify-content-evenly px-4">
           <!-- Bhava: Emotion Analysis -->
-          <div
-            class="post col-md-4 ml all col-10 mt-3 mt-md-0"
-            data-aos="fade-up"
-          >
+          <div class="post col-md-6 mldl all col-10 mt-4" data-aos="fade-up">
             <div class="card">
-              <img
-                src="https://news.northeastern.edu/wp-content/uploads/2021/08/facial_expressions_1400.jpg"
-                class="card-img-top"
-                alt="Bhava Emotion Analysis"
-              />
+              <img src="images/projects/bhava.png" class="card-img-top" alt="Bhava Emotion Analysis" style="height: 250px; object-fit: cover;">
               <div class="card-body text-center">
                 <h4 class="card-title">Bhava: Emotion Analysis</h4>
-                <span class="badge bg-secondary badge-pill"
-                  >Machine Learning</span
-                >
+                <small class="text-muted d-block mb-2">Aug 2024 - Sep 2024</small>
+                <span class="badge bg-secondary badge-pill">Machine Learning</span>
                 <span class="badge bg-secondary badge-pill">Deep Learning</span>
-                <br />
-                <a href="#" class="link">Read More</a>
+                <br>
+                <button class="link read-more-btn mt-3" data-bs-toggle="collapse" data-bs-target="#bhavaDetails">
+                  Read More
+                </button>
+                <div class="collapse mt-3" id="bhavaDetails">
+                  <ul class="text-start list-unstyled">
+                    <li>• Emotion analysis system using deep learning</li>
+                    <li>• Real-time emotion detection capabilities</li>
+                    <li>• Technologies Used: Python, TensorFlow, OpenCV</li>
+                    <li class="mt-2">
+                      <a href="https://github.com/PrabinDumre/Facial_Emotion_Recognization-" target="_blank" class="source-code-link">
+                        <i class="bi bi-github"></i> View Source Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- My Budget Buddy -->
+          <div class="post col-md-6 webapp all col-10 mt-4" data-aos="fade-up">
+            <div class="card">
+              <img src="images/projects/budget-buddy.png" class="card-img-top" alt="Budget Management App" style="height: 250px; object-fit: cover;">
+              <div class="card-body text-center">
+                <h4 class="card-title">My Budget Buddy</h4>
+                <small class="text-muted d-block mb-2">Sep 2024 - Present</small>
+                <span class="badge bg-secondary badge-pill">Next.js</span>
+                <span class="badge bg-secondary badge-pill">Django</span>
+                <span class="badge bg-secondary badge-pill">MySQL</span>
+                <br>
+                <button class="link read-more-btn mt-3" data-bs-toggle="collapse" data-bs-target="#budgetDetails">
+                  Read More
+                </button>
+                <div class="collapse mt-3" id="budgetDetails">
+                  <ul class="text-start list-unstyled">
+                    <li>• Designed and developed a platform for personal expense management with features like balance tracking and expense splitting.</li>
+                    <li>• Streamlined financial management for users by providing real-time updates and seamless interactions.</li>
+                    <li>• Technologies Used: Next.js, Django, MySQL</li>
+                    <li class="mt-2">
+                      <a href="https://github.com/PrabinDumre/My_Budget_Buddy" target="_blank" class="source-code-link">
+                        <i class="bi bi-github"></i> View Source Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Forest Fire Prediction -->
-          <div
-            class="post col-md-4 webapp all col-10 mt-3 mt-md-0"
-            data-aos="fade-up"
-          >
+          <div class="post col-md-6 webapp mldl all col-10 mt-4" data-aos="fade-up">
             <div class="card">
-              <img
-                src="https://via.placeholder.com/300x200?text=Forest+Fire+Prediction"
-                class="card-img-top"
-                alt="Forest Fire Prediction"
-              />
+              <img src="images/projects/forest-fire.png" class="card-img-top" alt="Forest Fire Prediction" style="height: 250px; object-fit: cover;">
               <div class="card-body text-center">
-                <h4 class="card-title">Forest Fire Prediction</h4>
+                <h4 class="card-title">Forest Fire Prediction Website</h4>
+                <small class="text-muted d-block mb-2">Aug 2024 - Oct 2024</small>
                 <span class="badge bg-secondary badge-pill">Flask</span>
-                <span class="badge bg-secondary badge-pill">Web App</span>
-                <br />
-                <a href="#" class="read-more-btn link">Read More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Alzheimer Classification -->
-          <div
-            class="post col-md-4 ml all col-10 mt-3 mt-md-0"
-            data-aos="fade-up"
-          >
-            <div class="card">
-              <img
-                src="https://via.placeholder.com/300x200?text=Alzheimer+Classification"
-                class="card-img-top"
-                alt="Alzheimer Classification"
-              />
-              <div class="card-body text-center">
-                <h4 class="card-title">Alzheimer Classification</h4>
-                <span class="badge bg-secondary badge-pill">Deep Learning</span>
-                <span class="badge bg-secondary badge-pill">Augmentation</span>
-                <br />
-                <a href="#" class="read-more-btn link">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-evenly mt-4 px-4">
-          <!-- Titanic Survival Prediction -->
-          <div
-            class="post col-md-4 ml all col-10 mt-3 mt-md-0"
-            data-aos="fade-up"
-          >
-            <div class="card">
-              <img
-                src="https://via.placeholder.com/300x200?text=Titanic+Survival+Prediction"
-                class="card-img-top"
-                alt="Titanic Survival Prediction"
-              />
-              <div class="card-body text-center">
-                <h4 class="card-title">Titanic Survival Prediction</h4>
-                <span class="badge bg-secondary badge-pill">Data Analysis</span>
                 <span class="badge bg-secondary badge-pill">Python</span>
-                <br />
-                <a href="#" class="read-more-btn link">Read More</a>
+                <span class="badge bg-secondary badge-pill">Scikit-learn</span>
+                <span class="badge bg-secondary badge-pill">Machine Learning</span>
+                <br>
+                <button class="link read-more-btn mt-3" data-bs-toggle="collapse" data-bs-target="#forestDetails">
+                  Read More
+                </button>
+                <div class="collapse mt-3" id="forestDetails">
+                  <ul class="text-start list-unstyled">
+                    <li>• Developed a Flask-based web application to predict forest fire risks using weather data and machine learning models.</li>
+                    <li>• Enhanced disaster management efforts by enabling accurate fire risk classification with a user-friendly interface.</li>
+                    <li>• Technologies Used: Flask, Python, Scikit-learn, HTML, CSS</li>
+                    <li class="mt-2">
+                      <a href="https://github.com/PrabinDumre/Forest-Fire-Prediction-Website" target="_blank" class="source-code-link">
+                        <i class="bi bi-github"></i> View Source Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Neuro-Evolution Research -->
-          <div
-            class="post col-md-4 dataanalysis all col-10 mt-3 mt-md-0"
-            data-aos="fade-up"
-          >
+          <!-- Python Utility Projects -->
+          <div class="post col-md-6 python all col-10 mt-4" data-aos="fade-up">
             <div class="card">
-              <img
-                src="https://via.placeholder.com/300x200?text=Neuro+Evolution+Research"
-                class="card-img-top"
-                alt="Neuro Evolution Research"
-              />
+              <img src="images/projects/python-utils.png" class="card-img-top" alt="Python Utility Tools" style="height: 250px; object-fit: cover;">
               <div class="card-body text-center">
-                <h4 class="card-title">Neuro-Evolution Research</h4>
-                <span class="badge bg-secondary badge-pill">Data Mining</span>
-                <span class="badge bg-secondary badge-pill"
-                  >Evolutionary Models</span
-                >
-                <br />
-                <a href="#" class="read-more-btn link">Read More</a>
+                <h4 class="card-title">Python Utility and Automation Projects</h4>
+                <small class="text-muted d-block mb-2">Aug 2024 - Sep 2024</small>
+                <span class="badge bg-secondary badge-pill">Python</span>
+                <span class="badge bg-secondary badge-pill">OpenCV</span>
+                <span class="badge bg-secondary badge-pill">PIL</span>
+                <br>
+                <button class="link read-more-btn mt-3" data-bs-toggle="collapse" data-bs-target="#pythonDetails">
+                  Read More
+                </button>
+                <div class="collapse mt-3" id="pythonDetails">
+                  <ul class="text-start list-unstyled">
+                    <li>• Created utility tools including a face recognition attendance system, image resizer, PDF merger, text-to-speech robot speaker, and weather application.</li>
+                    <li>• Improved efficiency in attendance tracking, image processing, document management, and real-time weather updates.</li>
+                    <li>• Technologies Used: Python, OpenCV, Pillow (PIL), PyPDF2, pyttsx3, APIs</li>
+                    <li class="mt-2">
+                      <a href="https://github.com/PrabinDumre/Mini_Projects" target="_blank" class="source-code-link">
+                        <i class="bi bi-github"></i> View Source Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Analysis Project -->
+          <div class="post col-md-6 dataanalysis all col-10 mt-4" data-aos="fade-up">
+            <div class="card">
+              <img src="images/projects/data-analysis.png" class="card-img-top" alt="Data Analysis Dashboard" style="height: 250px; object-fit: cover;">
+              <div class="card-body text-center">
+                <h4 class="card-title">Data Analysis and Visualization Project</h4>
+                <small class="text-muted d-block mb-2">Dec 2023 - Aug 2024</small>
+                <span class="badge bg-secondary badge-pill">Python</span>
+                <span class="badge bg-secondary badge-pill">Power BI</span>
+                <span class="badge bg-secondary badge-pill">Pandas</span>
+                <br>
+                <button class="link read-more-btn mt-3" data-bs-toggle="collapse" data-bs-target="#dataDetails">
+                  Read More
+                </button>
+                <div class="collapse mt-3" id="dataDetails">
+                  <ul class="text-start list-unstyled">
+                    <li>• Conducted comprehensive data analysis using advanced data visualization tools and techniques.</li>
+                    <li>• Extracted actionable insights by performing exploratory data analysis (EDA) and creating interactive dashboards.</li>
+                    <li>• Technologies Used: Python, Power BI, Excel, Pandas, Matplotlib</li>
+                    <li class="mt-2">
+                      <a href="https://github.com/PrabinDumre/Data-Analysis-Projects" target="_blank" class="source-code-link">
+                        <i class="bi bi-github"></i> View Source Code
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -509,6 +736,55 @@
       </div>
     </section>
     <!-- portfolio section ends here -->
+
+    <!-- Research section starts -->
+    <section class="research py-5" id="research">
+      <div class="heading text-center mb-5">
+        <small>Academic Contributions</small>
+        <h3>Papers & Publications</h3>
+      </div>
+
+      <div class="container-fluid px-lg-5 px-md-3 px-sm-2">
+        <div class="row justify-content-center align-items-center g-4">
+          <!-- Publication 1 -->
+          <div class="col-12 col-md-6 col-lg-6" data-aos="fade-up">
+            <div class="publication-card">
+              <div class="publication-year">2024</div>
+              <h4>Optimizing Linear Regression Models: A Comparative Study of Error Metrics</h4>
+              <div class="publication-venue">IEEE ICTACS-2024</div>
+              <p class="publication-description">
+                • Conducted an in-depth comparison of error metrics (MAE, MSE, RMSE, R-SQUARED) in linear regression models to improve prediction accuracy.
+              </p>
+            </div>
+          </div>
+
+          <!-- Publication 2 -->
+          <div class="col-12 col-md-6 col-lg-6" data-aos="fade-up">
+            <div class="publication-card">
+              <div class="publication-year">2024</div>
+              <h4>Alzheimer Classification Using Deep Learning and Augmentation</h4>
+              <div class="publication-venue">Research Square Journal</div>
+              <p class="publication-description">
+                • Proposed a deep learning model augmented with advanced preprocessing techniques for classifying Alzheimer stages.
+              </p>
+            </div>
+          </div>
+
+          <!-- Publication 3 -->
+          <div class="col-12 col-md-6 col-lg-6" data-aos="fade-up">
+            <div class="publication-card">
+              <div class="publication-year">2023</div>
+              <h4>Bhava: An Analysis of Emotion Based on Artificial Intelligence</h4>
+              <div class="publication-venue">IEEE ICEARS 2023</div>
+              <p class="publication-description">
+                • Utilized Convolutional Neural Networks (CNN) combined with Local Binary Patterns (LBP) and Oriented FAST and Rotated BRIEF (ORB) features to classify emotions from facial expressions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Research section ends -->
 
     <!-- contact section starts -->
     <section class="contact py-5" id="contact">
@@ -523,7 +799,7 @@
               <i class="bi bi-geo-alt-fill"></i>
             </div>
             <div class="col-11">
-              <p>Bangalore, India</p>
+              <p>Sunwal - 7, Jyamire, Nepal</p>
             </div>
           </div>
           <div class="row justify-content-evenly">
@@ -531,7 +807,7 @@
               <i class="bi bi-telephone-fill"></i>
             </div>
             <div class="col-11">
-              <p>+91 90364 57380</p>
+              <p>+977 98666 56942 / +91 90364 57380</p>
             </div>
           </div>
           <div class="row justify-content-evenly">
@@ -544,50 +820,72 @@
           </div>
           <div class="row justify-content-evenly">
             <div class="col-1">
-              <i class="bi bi-globe-americas"></i>
+              <i class="bi bi-linkedin"></i>
             </div>
             <div class="col-11">
-              <p>github.com/PrabinDumre</p>
+              <p>prabin-dumre</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-facebook"></i>
+            </div>
+            <div class="col-11">
+              <p>Prabin Rijal</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-instagram"></i>
+            </div>
+            <div class="col-11">
+              <p>Prabin Rijal</p>
             </div>
           </div>
         </div>
         <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
           <div class="contact-form">
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Name"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="E-mail"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Mobile No."
-              />
-            </div>
-            <div class="mb-3">
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                placeholder="Message"
-                rows="5"
-              ></textarea>
-            </div>
-            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              Submit
-            </button>
+            <form id="contactForm" onsubmit="return submitForm(event)">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="E-mail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="tel"
+                  name="phone"
+                  class="form-control"
+                  placeholder="Mobile No."
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  placeholder="Message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -605,34 +903,8 @@
 
     <!-- footer section starts  -->
     <footer class="text-center text-muted py-4">
-      <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
-      <div class="link-group mt-5" data-aos="fade-up">
-        <a href="#home">Home</a>
-        <div class="vr"></div>
-        <a href="#about">About</a>
-        <div class="vr"></div>
-        <a href="#experience">Experience</a>
-        <div class="vr"></div>
-        <a href="#service">Service</a>
-        <div class="vr"></div>
-        <a href="#portfolio">Portfolio</a>
-        <div class="vr"></div>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="social-links mt-5" data-aos="fade-up">
-        <button href="" class="rounded-pill dribble">
-          <i class="bi bi-dribbble"></i>
-        </button>
-        <button href="" class="rounded-pill whatsapp">
-          <i class="bi bi-whatsapp"></i>
-        </button>
-        <button href="" class="rounded-pill behance">
-          <i class="bi bi-behance"></i>
-        </button>
-      </div>
       <hr class="text-muted my-4" />
-
-      <p>Copyright 2022 Prabin | All Rights Reserved.</p>
+      <p>Copyright 2024 Prabin | All Rights Reserved.</p>
     </footer>
     <!-- footer section ends here -->
 
@@ -654,5 +926,21 @@
     </script>
     <!-- custom js file linking -->
     <script src="js/script.js"></script>
+
+    <!-- Add this modal for the thank you message -->
+    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center py-4">
+            <i class="bi bi-check-circle text-success" style="font-size: 3rem;"></i>
+            <h4 class="mt-3" style="color: #3f396d;">Thank You!</h4>
+            <p class="text-muted">Your message has been sent successfully.</p>
+            <button type="button" class="c-btn h-btn py-2 px-4 rounded-pill" data-bs-dismiss="modal">
+              Okay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

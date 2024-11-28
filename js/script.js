@@ -87,16 +87,24 @@ let progressreact = setInterval(() => {
 $(document).ready(function () {
   $(".filter-item").click(function () {
     const value = $(this).attr("data-filter");
+    
+    // Remove active class from all buttons and add to clicked button
+    $(".filter-item").removeClass("active");
+    $(this).addClass("active");
+
     if (value == "all") {
-      $(".post").show("1000");
+      $(".post").show(400);
     } else {
       $(".post")
         .not("." + value)
-        .hide("1000");
-      $(".post")
-        .filter("." + value)
-        .show("1000");
+        .hide(200);
+      $("." + value)
+        .show(400)
+        .css('display', 'block'); // Force display block
     }
+
+    // Trigger AOS refresh to show animations
+    AOS.refresh();
   });
 });
 
@@ -141,4 +149,101 @@ function scrollFunction() {
 mybutton.addEventListener("click",function(){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-item');
+    const projects = document.querySelectorAll('.post');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            projects.forEach(project => {
+                if (filterValue === 'all' || project.classList.contains(filterValue)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
+// Update the form submission handler
+function submitForm(e) {
+    e.preventDefault();
+    
+    // Get the submit button
+    const submitButton = e.target.querySelector('button[type="submit"]');
+    const originalText = submitButton.innerHTML;
+    
+    // Change button text and disable it
+    submitButton.innerHTML = '<i class="bi bi-arrow-repeat spin"></i> Sending...';
+    submitButton.disabled = true;
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    fetch("https://formsubmit.co/ajax/prabindumre16700@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Accept': 'application/json'
+        },
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Show the thank you modal
+        const modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+        modal.show();
+        
+        // Reset form and button
+        form.reset();
+        submitButton.innerHTML = originalText;
+        submitButton.disabled = false;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error sending your message. Please try again.');
+        
+        // Reset button on error
+        submitButton.innerHTML = originalText;
+        submitButton.disabled = false;
+    });
+
+    return false;
+}
+
+// Add event listener for modal close
+document.getElementById('thankYouModal').addEventListener('hidden.bs.modal', function () {
+    // Any additional actions after closing the modal
+});
+
+// Add this to check image loading
+document.addEventListener('DOMContentLoaded', function() {
+    const companyImages = document.querySelectorAll('.timeline-icon img');
+    companyImages.forEach(img => {
+        img.onerror = function() {
+            console.error('Error loading image:', img.src);
+        };
+        img.onload = function() {
+            console.log('Image loaded successfully:', img.src);
+        };
+    });
+});
+
+// Add this to ensure animations work on filter change
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize AOS
+  AOS.init({
+    duration: 800,
+    once: false, // Allow animations to repeat
+    mirror: true // Animate elements on scroll up as well
+  });
 });
